@@ -36,6 +36,17 @@ def XOR(x1, x2):
     y = AND(s1, s2)
     return y
 
+def step_function(x):
+    y = x > 0
+    return y.astype(np.int)
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def relu(x):
+    return np.maxium(0, x)
+
+
 
 if __name__ == '__main__':
     for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
